@@ -120,6 +120,20 @@ You will find all worf binaries, including the examples, in `./target/release`.
 Copy the binaries you need into a path that is part of `$PATH`, for example `/usr/bin`.
 Installing via cargo (once available) will put the binaries in `$HOME/.cargo/bin`.
 
+On debian based systems, Cargo-deb can be used to build a deb package for installation purposes. Note, the deb package cannot be distributed at this time, it can only be used on the system that built worf. Within the root of the git repo, run the following:
+
+Install cargo-deb
+```bash
+cargo install cargo-deb
+```
+
+Create deb package and install
+
+```bash
+cargo deb -p worf-launcher
+sudo apt install ./target/debian/worf-launcher-xxxx.deb
+```
+
 
 ## Configuring Worf
 
