@@ -318,10 +318,10 @@ fn eval_expr(tokens: &mut VecDeque<Token>) -> Result<Value, String> {
             return Err("Mismatched parentheses".to_owned());
         }
         let b = values.pop().ok_or_else(|| {
-            format!("Missing right operand in final evaluation (values: {values:?}, ops: {ops:?})",)
+            format!("Missing right operand in final evaluation (values: {values:?}, ops: {ops:?})")
         })?;
         let a = values.pop().ok_or_else(|| {
-            format!("Missing left operand in final evaluation (values: {values:?}, ops: {ops:?})",)
+            format!("Missing left operand in final evaluation (values: {values:?}, ops: {ops:?})")
         })?;
         values.push(apply_op(&a, &b, &op));
     }
