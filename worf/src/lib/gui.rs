@@ -701,7 +701,7 @@ fn build_ui<T>(
 
     log::debug!("window show took {:?}", window_start.elapsed());
 
-    log::debug!("Building UI took {:?}", start.elapsed(),);
+    log::debug!("Building UI took {:?}", start.elapsed());
 }
 
 fn create_background(config: &Config) -> Option<ApplicationWindow> {
